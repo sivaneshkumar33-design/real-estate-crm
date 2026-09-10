@@ -10,7 +10,11 @@ const dashboardRoutes = require('./routes/dashboardRoutes');
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());.
+app.use(cors({
+    origin: ['https://real-estate-crm-frontend-1-b8cqp1ii7-siva-27db.vercel.app', 'http://localhost:4200'],
+    credentials: true
+}));
 
 app.use(express.json());
 
